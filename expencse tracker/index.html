@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Expense Tracker</title>
+	<style type="text/css">
+		  button.download-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.download-button:hover {
+  background-color: #45a049;
+}
+
+button.download-button:focus {
+  outline: none;
+}
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+		h1 {
+			text-align: center;
+		}
+		form {
+			margin: 20px auto;
+			width: 500px;
+			text-align: center;
+		}
+		input[type="text"], input[type="number"] {
+			padding: 5px;
+			margin: 5px;
+			width: 300px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+		}
+		input[type="submit"] {
+			padding: 10px;
+			margin: 5px;
+			width: 100px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		table {
+			margin: 20px auto;
+			border-collapse: collapse;
+			width: 500px;
+		}
+		table th, table td {
+			padding: 10px;
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+		.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #d7ecff;
+  color: #0c0c0c;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.navbar-username {
+  margin-right: 10px;
+  color: #090909;
+  font-weight: bold;
+}
+
+.navbar-logout-btn {
+  background-color: transparent;
+  color: #090909;
+  border: none;
+  cursor: pointer;
+}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-title">Expense Tracker Tool</div>
+		<div class="navbar-user">
+		  <div id="username" class="navbar-username"> Mukulsingh</div>
+		  <button id="logoutButton" class="navbar-logout-btn">Logout</button>
+		</div>
+	  </div>
+    <h1>Expense Tracker</h1>
+	<form id="expenseForm">
+		<label for="expenseName">Expense Name:</label>
+		<input type="text" id="expenseName" required><br>
+
+		<label for="expenseAmount">Expense Amount:</label>
+		<input type="number" id="expenseAmount" required><br>
+
+		<label for="expenseDate">Expense Date:</label>
+		<input type="date" id="expenseDate" required><br>
+
+		<label for="fixedAmount">Fixed Amount:</label>
+		<input type="number" id="fixedAmount" required><br>
+
+		<input type="submit" value="Add Expense">
+	</form>
+
+	<table id="expenseTable">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Expense Name</th>
+				<th>Expense Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Total</th>
+				<th colspan="2" id="totalExpense">0</th>
+			</tr>
+			<tr>
+				<th>Fixed Amount Remaining</th>
+				<th colspan="2" id="remainingAmount">0</th>
+			</tr>
+		</tfoot>
+	</table>
+
+
+
+	<script src="app.js"></script>
+</body>
+</html>
